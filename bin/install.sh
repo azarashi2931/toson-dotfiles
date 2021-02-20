@@ -22,13 +22,8 @@ n lts
 apt-get purge nodejs npm -y
 
 #install python3 pyenv
-<<<<<<< HEAD
 apt-get update
-apt-get install git gcc make zlib1g-dev libffi-dev libbz2-dev libssl-dev libreadline-dev libsqlite3-dev python3-tk tk-dev -y
-=======
-sudo apt update
-sudo apt install gcc zlib1g-dev libffi-dev libbz2-dev libssl-dev libreadline-dev libsqlite3-dev python3-tk tk-dev -y
->>>>>>> 1d820469310a61a82f9648b0119e311ccb7aa153
+apt-get install git gcc zlib1g-dev libffi-dev libbz2-dev libssl-dev libreadline-dev libsqlite3-dev python3-tk tk-dev -y
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
 
