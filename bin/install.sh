@@ -14,16 +14,12 @@ apt-get upgrade
 apt-get install build-essential -y
 
 #install n
-apt-get update
-apt-get install nodejs -y
-apt-get install npm -y
+apt-get purge nodejs npm -y
 npm install -g n
 n lts
-apt-get purge nodejs npm -y
 
 #install python3 pyenv
-apt-get update
-apt-get install git gcc zlib1g-dev libffi-dev libbz2-dev libssl-dev libreadline-dev libsqlite3-dev python3-tk tk-dev -y
+apt-get install zlib1g-dev libffi-dev libbz2-dev libssl-dev libreadline-dev libsqlite3-dev python3-tk tk-dev -y
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
 
