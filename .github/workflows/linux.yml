@@ -16,23 +16,11 @@ jobs:
     # Error Check
     - name: Install stow
       run: |
+        apt-get update
         apt-get install tzdata make -y
 
     - name: make deploy
       run: make deploy
 
-    - name: make install
-      run: make install
-
-    - name: Run install.sh
-      run: ${GITHUB_WORKSPACE}/bin/install.sh
-
-    - name: Load .zprofile
-      run: |
-        zsh ~/.zprofile 2> error.log; cat error.log
-        if [ -s error.log ]; then false; fi
-        
-    - name: Load .zshrc
-      run: |
-        zsh ~/.zshrc 2> error.log; cat error.log
-        if [ -s error.log ]; then false; fi
+    - name: make init
+      run: make init
