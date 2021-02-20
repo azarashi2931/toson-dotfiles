@@ -16,7 +16,7 @@ jobs:
     # Error Check
     - name: Install stow
       run: |
-        sudo apt-get install stow 
+        apt-get install tzdata make -y
 
     - name: make deploy
       run: make deploy
